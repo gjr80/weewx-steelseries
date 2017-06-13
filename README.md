@@ -1,6 +1,6 @@
 # SteelSeries Weather Gauges extension #
 
-A weeWX extension for the *SteelSeries Weather Gauges*.
+A weeWX extension to install the *SteelSeries Weather Gauges*.
 
 The current *SteelSeries Weather Gauges* extension version is v2.6.1 which contains *SteelSeries Weather Gauges* v2.6.1.
 
