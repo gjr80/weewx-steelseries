@@ -11,9 +11,11 @@
 #
 #                  Installer for SteelSeries Weather Gauges
 #
-# Version: 2.6.1                                    Date: 13 June 2017
+# Version: 2.6.3                                    Date: 31 August 2017
 #
 # Revision History
+#   31 August 2017      v2.6.3
+#       - upgraded to SteelSeries Weather Gauges version 2.6.3
 #   13 June 2017        v2.6.1
 #       - initial release as a weeWX extension
 #       - version number chosen to match SteelSeries Weather Gauges version
@@ -25,7 +27,7 @@ from distutils.version import StrictVersion
 from setup import ExtensionInstaller
 
 REQUIRED_VERSION = "3.4.0"
-SSWG_VERSION = "2.6.1"
+SSWG_VERSION = "2.6.3"
 
 
 def loader():
