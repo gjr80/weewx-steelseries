@@ -58,7 +58,7 @@ The preferred method to install the *SteelSeries Weather Gauges* extension is to
 
 This will result in weeWX generating the weeWX *SteelSeries Weather Gauges* data file (*gauge-data.txt*) and a demonstration page displaying the *Steel Series Weather Gauges* (*index.html*) each report cycle. The generated files can be found in the *$HTML\_ROOT/ss* directory. The demonstration page can be displayed in a browser by pointing it at *$HTML\_ROOT/ss/index.html*.
 
-Further customization of the SteelSeries Gauges can be performed by following the steps in the [SteelSeries weather Gauges wiki](<https://github.com/gjr80/weewx-steelseries/wiki>).
+Further customization of the SteelSeries Gauges can be performed by following the steps in the [SteelSeries Weather Gauges wiki](<https://github.com/gjr80/weewx-steelseries/wiki>).
 
 The *SteelSeries Weather Gauges* JavaScript and CSS files are copied to the *$HTML\_ROOT/ss* directory during the first report cycle after weeWX is started.
 
