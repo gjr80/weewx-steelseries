@@ -28,15 +28,7 @@ The preferred method to install the *SteelSeries Weather Gauges* extension is to
 
     where *$DOWNLOAD_ROOT* is the path to the directory where the *SteelSeries Weather Gauges* extension is to be downloaded.
 
-2.  Stop WeeWX:
-
-        $ sudo /etc/init.d/weewx stop
-
-    or
-
-        $ sudo service weewx stop
-
-3.  Install the *SteelSeries Weather Gauges* extension downloaded at step 1 using the *wee\_extension* utility:
+2.  Install the *SteelSeries Weather Gauges* extension downloaded at step 1 using the *wee\_extension* utility:
 
         $ wee_extension --install=$DOWNLOAD_ROOT/steelseries-2.7.3.tar.gz
 
@@ -48,13 +40,13 @@ The preferred method to install the *SteelSeries Weather Gauges* extension is to
         Saved configuration dictionary. Backup copy at /home/weewx/weewx.conf.20170320124410
         Finished installing extension '/var/tmp/steelseries-2.7.3.tar.gz'
 
-4.  Start WeeWX:
+3.  Restart WeeWX:
 
-        $ sudo /etc/init.d/weewx start
+        $ sudo /etc/init.d/weewx restart
 
     or
 
-        $ sudo service weewx start
+        $ sudo service weewx restart
 
 This will result in WeeWX generating the WeeWX *SteelSeries Weather Gauges* data file (*gauge-data.txt*) and a demonstration page displaying the *SteelSeries Weather Gauges* (*index.html*) each report cycle. The generated files can be found in the *$HTML\_ROOT/ss* directory. The demonstration page can be displayed in a browser by pointing it at *$HTML\_ROOT/ss/index.html*.
 

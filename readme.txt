@@ -1,16 +1,16 @@
 The SteelSeries Weather Gauges extension allows automated installation and
 default setup of the SteelSeries Weather Gauges as per the SteelSeries Weather
 Gauges GitHub repository (https://github.com/mcrossley/SteelSeries-Weather-Gauges).
-Once the SteelSeries Weather Gauges extension is installed weeWX will generate
+Once the SteelSeries Weather Gauges extension is installed WeeWX will generate
 a gauge-data.txt file and a demonstration html page displaying the SteelSeries
-Weather Gauges using weeWX sourced data. These files are updated each report
+Weather Gauges using WeeWX sourced data. These files are updated each report
 cycle.
 
 The SteelSeries Weather Gauges extension consists of a skin that generates
 gauge-data.txt and index.html each report cycle. The skin also contains the
 SteelSeries Weather Gauges JavaScript and CSS files used in rendering the
-gauges. The JavaScript and CSS files are copied once to the weeWX symbolic
-$HTML_ROOT directory during the first report cycle after weeWX has been
+gauges. The JavaScript and CSS files are copied once to the WeeWX symbolic
+$HTML_ROOT directory during the first report cycle after WeeWX has been
 started.
 
 The SteelSeries Weather Gauges extension version number is identical to the
@@ -22,24 +22,24 @@ Pre-Requisites
 The SteelSeries Weather Gauges extension requires weeWX v3.4.0 or greater.
 
     Note: Symbolic names are used below to refer to some file location on the
-          weeWX system. These symbolic names allow a common name to be used to
+          WeeWX system. These symbolic names allow a common name to be used to
           refer to a directory that may be different from system to system. The
           following symbolic names are used in this document:
 
           - $DOWNLOAD_ROOT. The path to the directory containing the downloaded
             SteelSeries Weather Gauges extension.
 
-          - $HTML_ROOT. The path to the directory where weeWX generated reports
+          - $HTML_ROOT. The path to the directory where WeeWX generated reports
             are saved. This directory is normally set in the [StdReport]
-            section of weewx.conf. Refer to 'where to find things' in the weeWX
+            section of weewx.conf. Refer to 'where to find things' in the WeeWX
             User's Guide http://weewx.com/docs/usersguide.htm#Where_to_find_things
             for further information.
 
-          - $SKIN_ROOT. The path to the directory where weeWX skin folders are
-            located. This directory is normally set in the [StdReport] section
-            of weewx.conf. Refer to 'where to find things' in the weeWX User's
-            Guide http://weewx.com/docs/usersguide.htm#Where_to_find_things for
-            further information.
+          - $SKIN_ROOT. The path to the directory where WeeWX skin directories
+            are located. This directory is normally set in the [StdReport]
+            section of weewx.conf. Refer to 'where to find things' in the WeeWX
+            User's Guide http://weewx.com/docs/usersguide.htm#Where_to_find_things
+            for further information.
 
 
 Installation Instructions
@@ -53,22 +53,14 @@ Installation using the wee_extension utility
 1.  Download the latest SteelSeries Weather Gauges extension from the
 weewx-steelseries releases page
 (https://github.com/gjr80/weewx-steelseries_gauges/releases) into a directory
-accessible from the weeWX machine:
+accessible from the WeeWX machine:
 
     $ wget -P $DOWNLOAD_ROOT https://github.com/gjr80/weewx-steelseries/weather_gauges/releases/download/v2.7.3/steelseries-2.7.3.tar.gz
 
 	where $DOWNLOAD_ROOT is the path to the directory where the SteelSeries
     Weather Gauges extension is to be downloaded.
 
-2.  Stop weeWX:
-
-    $ sudo /etc/init.d/weewx stop
-
-	or
-
-    $ sudo service weewx stop
-
-3.  Install the SteelSeries Weather Gauges extension downloaded at step 1 using
+2.  Install the SteelSeries Weather Gauges extension downloaded at step 1 using
 the wee_extension utility:
 
     $ wee_extension --install=$DOWNLOAD_ROOT/steelseries-2.7.3.tar.gz
@@ -81,15 +73,15 @@ the wee_extension utility:
         Saved configuration dictionary. Backup copy at /home/weewx/weewx.conf.20170320124410
         Finished installing extension '/var/tmp/steelseries-2.7.3.tar.gz'
 
-4.  Start weeWX:
+3.  Restart WeeWX:
 
-    $ sudo /etc/init.d/weewx start
+    $ sudo /etc/init.d/weewx restart
 
 	or
 
-    $ sudo service weewx start
+    $ sudo service weewx restart
 
-This will result in weeWX generating the weeWX SteelSeries Weather Gauges data
+This will result in WeeWX generating the weeWX SteelSeries Weather Gauges data
 file (gauge-data.txt) and a demonstration page displaying the Steel Series
 Weather Gauges (index.html) each report cycle. The generated files can be found
 in the $HTML_ROOT/ss directory. The demonstration page can be displayed in a
@@ -103,7 +95,7 @@ Manual installation
 1.  Download the latest SteelSeries Weather Gauges extension from the
 weewx-steelseries_gauges releases page
 (https://github.com/gjr80/weewx-steelseries_gauges/releases) into a directory
-accessible from the weeWX machine:
+accessible from the WeeWX machine:
 
      $ wget -P $DOWNLOAD_ROOT https://github.com/gjr80/weewx-steelseries/weather_gauges/releases/download/v2.7.3/steelseries-2.7.3.tar.gz
 
@@ -114,7 +106,7 @@ accessible from the weeWX machine:
 
     $ tar xvfz steelseries-2.7.3.tar.gz
 
-3.  Copy files from within the resulting folder as follows:
+3.  Copy files from within the resulting directory as follows:
 
     $ cp -R steelseries/skins/* $SKIN_ROOT
 
@@ -167,18 +159,16 @@ weewx.conf:
 
     -   save weewx.conf
 
-5.  Stop then start weeWX:
+5.  Restart WeeWX:
 
-    $ sudo /etc/init.d/weewx stop
-    $ sudo /etc/init.d/weewx start
+    $ sudo /etc/init.d/weewx restart
 
 	or
 
-    $ sudo service weewx stop
-    $ sudo service weewx start
+    $ sudo service weewx restart
 
-This will result in weeWX generating the weeWX SteelSeries Weather Gauges data
-file (gauge-data.txt) and a demonstration page displaying the Steel Series
+This will result in WeeWX generating the weeWX SteelSeries Weather Gauges data
+file (gauge-data.txt) and a demonstration page displaying the SteelSeries
 Weather Gauges (index.html) each report cycle. The generated files can be found
 in the $HTML_ROOT/ss directory. The demonstration page can be displayed in a
 browser by pointing it at $HTML_ROOT/ss/index.html.
@@ -206,15 +196,13 @@ To change the station timeout value:
 
     -   save $SKIN_ROOT/ss/scripts/gauges.js
 
-    -   stop then start weeWX:
+    -   restart WeeWX:
 
-        $ sudo /etc/init.d/weewx stop
-        $ sudo /etc/init.d/weewx start
+        $ sudo /etc/init.d/weewx restart
 
-        or
+	    or
 
-        $ sudo service weewx stop
-        $ sudo service weewx start
+        $ sudo service weewx restart
 
 Displaying solar radiation and UV gauges
 
@@ -235,15 +223,13 @@ gauges:
 
     -   save $SKIN_ROOT/ss/scripts/gauges.js
 
-    -   stop then start weeWX:
+    -   restart WeeWX:
 
-        $ sudo /etc/init.d/weewx stop
-        $ sudo /etc/init.d/weewx start
+        $ sudo /etc/init.d/weewx restart
 
-        or
+	    or
 
-        $ sudo service weewx stop
-        $ sudo service weewx start
+        $ sudo service weewx restart
 
 
 Changing the gauge-data.txt units
@@ -283,7 +269,7 @@ page is first displayed. To change the units used in gauge-data.txt:
 
     -   save weewx.conf
 
-    -   force a weeWX configuration reload:
+    -   force a WeeWX configuration reload:
 
         $ sudo /etc/init.d/weewx reload
 
