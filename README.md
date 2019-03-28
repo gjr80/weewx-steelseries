@@ -2,7 +2,7 @@
 
 A weeWX extension to install the *SteelSeries Weather Gauges*.
 
-The current *SteelSeries Weather Gauges* extension version is v2.6.3 which contains *SteelSeries Weather Gauges* v2.6.3.
+The current *SteelSeries Weather Gauges* extension version is v2.7.3 which contains *SteelSeries Weather Gauges* v2.7.3.
 
 ## Description ##
 
@@ -24,7 +24,7 @@ The preferred method to install the *SteelSeries Weather Gauges* extension is to
 
 1.  Download the latest *SteelSeries Weather Gauges* extension from the [weewx-steelseries releases page](https://github.com/gjr80/weewx-steelseries/releases) into a directory accessible from the weeWX machine:
 
-        $ wget -P $DOWNLOAD_ROOT https://github.com/gjr80/weewx-steelseries/releases/download/v2.6.3/steelseries-2.7.3.tar.gz
+        $ wget -P $DOWNLOAD_ROOT https://github.com/gjr80/weewx-steelseries/releases/download/v2.7.3/steelseries-2.7.3.tar.gz
 
     where *$DOWNLOAD_ROOT* is the path to the directory where the *SteelSeries Weather Gauges* extension is to be downloaded.
 
