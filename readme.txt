@@ -19,7 +19,7 @@ extension.
 
 Pre-Requisites
 
-The SteelSeries Weather Gauges extension requires weeWX v3.4.0 or greater.
+The SteelSeries Weather Gauges extension requires WeeWX v3.4.0 or greater.
 
     Note: Symbolic names are used below to refer to some file location on the
           WeeWX system. These symbolic names allow a common name to be used to
@@ -55,7 +55,7 @@ weewx-steelseries releases page
 (https://github.com/gjr80/weewx-steelseries_gauges/releases) into a directory
 accessible from the WeeWX machine:
 
-    $ wget -P $DOWNLOAD_ROOT https://github.com/gjr80/weewx-steelseries/weather_gauges/releases/download/v2.7.4/steelseries-2.7.4.tar.gz
+    $ wget -P $DOWNLOAD_ROOT https://github.com/gjr80/weewx-steelseries/weather_gauges/releases/download/v2.7.4-1/steelseries-2.7.4-1.tar.gz
 
 	where $DOWNLOAD_ROOT is the path to the directory where the SteelSeries
     Weather Gauges extension is to be downloaded.
@@ -63,15 +63,15 @@ accessible from the WeeWX machine:
 2.  Install the SteelSeries Weather Gauges extension downloaded at step 1 using
 the wee_extension utility:
 
-    $ wee_extension --install=$DOWNLOAD_ROOT/steelseries-2.7.4.tar.gz
+    $ wee_extension --install=$DOWNLOAD_ROOT/steelseries-2.7.4-1.tar.gz
 
     This will result in output similar to the following:
 
-        Request to install '/var/tmp/steelseries-2.7.4.tar.gz'
-        Extracting from tar archive /var/tmp/steelseries-2.7.4.tar.gz
+        Request to install '/var/tmp/steelseries-2.7.4-1.tar.gz'
+        Extracting from tar archive /var/tmp/steelseries-2.7.4-1.tar.gz
         Saving installer file to /home/weewx/bin/user/installer/SteelSeries
         Saved configuration dictionary. Backup copy at /home/weewx/weewx.conf.20170320124410
-        Finished installing extension '/var/tmp/steelseries-2.7.4.tar.gz'
+        Finished installing extension '/var/tmp/steelseries-2.7.4-1.tar.gz'
 
 3.  Restart WeeWX:
 
@@ -81,7 +81,11 @@ the wee_extension utility:
 
     $ sudo service weewx restart
 
-This will result in WeeWX generating the weeWX SteelSeries Weather Gauges data
+    or
+
+    $ sudo systemctl restart weewx
+
+This will result in WeeWX generating the WeeWX SteelSeries Weather Gauges data
 file (gauge-data.txt) and a demonstration page displaying the Steel Series
 Weather Gauges (index.html) each report cycle. The generated files can be found
 in the $HTML_ROOT/ss directory. The demonstration page can be displayed in a
@@ -97,14 +101,14 @@ weewx-steelseries_gauges releases page
 (https://github.com/gjr80/weewx-steelseries_gauges/releases) into a directory
 accessible from the WeeWX machine:
 
-     $ wget -P $DOWNLOAD_ROOT https://github.com/gjr80/weewx-steelseries/weather_gauges/releases/download/v2.7.4/steelseries-2.7.4.tar.gz
+     $ wget -P $DOWNLOAD_ROOT https://github.com/gjr80/weewx-steelseries/weather_gauges/releases/download/v2.7.4-1/steelseries-2.7.4-1.tar.gz
 
 	where $DOWNLOAD_ROOT is the path to the directory where the SteelSeries
     Weather Gauges extension is to be downloaded.
 
 2.  Unpack the extension as follows:
 
-    $ tar xvfz steelseries-2.7.4.tar.gz
+    $ tar xvfz steelseries-2.7.4-1.tar.gz
 
 3.  Copy files from within the resulting directory as follows:
 
@@ -118,7 +122,7 @@ weewx.conf:
 
     -   edit weewx.conf
 
-        $ vi weewx.conf
+        $ nano weewx.conf
 
     -   locate the [StdReport] section and add the following stanza:
 
@@ -167,7 +171,11 @@ weewx.conf:
 
     $ sudo service weewx restart
 
-This will result in WeeWX generating the weeWX SteelSeries Weather Gauges data
+	or
+
+    $ sudo systemctl restart weewx
+
+This will result in WeeWX generating the WeeWX SteelSeries Weather Gauges data
 file (gauge-data.txt) and a demonstration page displaying the SteelSeries
 Weather Gauges (index.html) each report cycle. The generated files can be found
 in the $HTML_ROOT/ss directory. The demonstration page can be displayed in a
@@ -188,7 +196,7 @@ To change the station timeout value:
 
     -   edit $SKIN_ROOT/ss/scripts/gauges.js:
 
-        $ vi $SKIN_ROOT/ss/scripts/gauges.js
+        $ nano $SKIN_ROOT/ss/scripts/gauges.js
 
     -   locate the stationTimeout setting and change as required, eg:
 
@@ -204,6 +212,10 @@ To change the station timeout value:
 
         $ sudo service weewx restart
 
+        or
+
+        $ sudo systemctl restart weewx
+
 Displaying solar radiation and UV gauges
 
 The SteelSeries Weather Gauges extension is configured to display the solar
@@ -213,7 +225,7 @@ gauges:
 
     -   edit $SKIN_ROOT/ss/scripts/gauges.js:
 
-        $ vi $SKIN_ROOT/ss/scripts/gauges.js
+        $ nano $SKIN_ROOT/ss/scripts/gauges.js
 
     -   locate the showUvGauge and showSolarGauge settings and set both to
         false, eg:
@@ -231,6 +243,10 @@ gauges:
 
         $ sudo service weewx restart
 
+        or
+
+        $ sudo systemctl restart weewx
+
 
 Changing the gauge-data.txt units
 
@@ -242,7 +258,7 @@ page is first displayed. To change the units used in gauge-data.txt:
 
     -   edit weewx.conf:
 
-        $ vi weewx.conf
+        $ nano weewx.conf
 
     -   locate the [StdReport], [[SteelSeries]], [[[Units]]], [[[[Groups]]]]
         stanza and change the settings as required:
@@ -276,3 +292,7 @@ page is first displayed. To change the units used in gauge-data.txt:
         or
 
         $ sudo service weewx reload
+
+        or
+
+        $ sudo systemctl restart weewx

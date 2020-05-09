@@ -2,7 +2,7 @@
 
 A WeeWX extension to install the *SteelSeries Weather Gauges*.
 
-The current *SteelSeries Weather Gauges* extension version is v2.7.4 which contains *SteelSeries Weather Gauges* v2.7.4.
+The current *SteelSeries Weather Gauges* extension version is v2.7.4-1 which contains *SteelSeries Weather Gauges* v2.7.4(minor tweaks).
 
 ## Description ##
 
@@ -24,21 +24,21 @@ The preferred method to install the *SteelSeries Weather Gauges* extension is to
 
 1.  Download the latest *SteelSeries Weather Gauges* extension from the [weewx-steelseries releases page](https://github.com/gjr80/weewx-steelseries/releases) into a directory accessible from the WeeWX machine:
 
-        $ wget -P $DOWNLOAD_ROOT https://github.com/gjr80/weewx-steelseries/releases/download/v2.7.4/steelseries-2.7.4.tar.gz
+        $ wget -P $DOWNLOAD_ROOT https://github.com/gjr80/weewx-steelseries/releases/download/v2.7.4-1/steelseries-2.7.4-1.tar.gz
 
     where *$DOWNLOAD_ROOT* is the path to the directory where the *SteelSeries Weather Gauges* extension is to be downloaded.
 
 2.  Install the *SteelSeries Weather Gauges* extension downloaded at step 1 using the *wee\_extension* utility:
 
-        $ wee_extension --install=$DOWNLOAD_ROOT/steelseries-2.7.4.tar.gz
+        $ wee_extension --install=$DOWNLOAD_ROOT/steelseries-2.7.4-1.tar.gz
 
     this will result in output similar to the following:
 
-        Request to install '/var/tmp/steelseries-2.7.4.tar.gz'
-        Extracting from tar archive /var/tmp/steelseries-2.7.4.tar.gz
+        Request to install '/var/tmp/steelseries-2.7.4-1.tar.gz'
+        Extracting from tar archive /var/tmp/steelseries-2.7.4-1.tar.gz
         Saving installer file to /home/weewx/bin/user/installer/SteelSeries
         Saved configuration dictionary. Backup copy at /home/weewx/weewx.conf.20170320124410
-        Finished installing extension '/var/tmp/steelseries-2.7.4.tar.gz'
+        Finished installing extension '/var/tmp/steelseries-2.7.4-1.tar.gz'
 
 3.  Restart WeeWX:
 
@@ -47,6 +47,10 @@ The preferred method to install the *SteelSeries Weather Gauges* extension is to
     or
 
         $ sudo service weewx restart
+
+    or
+
+        $ sudo systemctl restart weewx
 
 This will result in WeeWX generating the WeeWX *SteelSeries Weather Gauges* data file (*gauge-data.txt*) and a demonstration page displaying the *SteelSeries Weather Gauges* (*index.html*) each report cycle. The generated files can be found in the *$HTML\_ROOT/ss* directory. The demonstration page can be displayed in a browser by pointing it at *$HTML\_ROOT/ss/index.html*.
 

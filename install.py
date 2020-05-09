@@ -1,29 +1,30 @@
-#
-# This program is free software; you can redistribute it and/or modify it under
-# the terms of the GNU General Public License as published by the Free Software
-# Foundation; either version 2 of the License, or (at your option) any later
-# version.
-#
-# This program is distributed in the hope that it will be useful, but WITHOUT
-# ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
-# FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
-# details.
-#
-#                  Installer for SteelSeries Weather Gauges
-#
-# Version: 2.7.4                                    Date: 17 September 2019
-#
-# Revision History
-#   17 September 2019   v2.7.4
-#       - upgraded to SteelSeries Weather Gauges version 2.7.4
-#   27 March 2019       v2.7.3
-#       - upgraded to SteelSeries Weather Gauges version 2.7.3
-#   31 August 2017      v2.6.3
-#       - upgraded to SteelSeries Weather Gauges version 2.6.3
-#   13 June 2017        v2.6.1
-#       - initial release as a weeWX extension
-#       - version number chosen to match SteelSeries Weather Gauges version
-#
+"""
+This program is free software; you can redistribute it and/or modify it under
+the terms of the GNU General Public License as published by the Free Software
+Foundation; either version 2 of the License, or (at your option) any later
+version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY
+WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+
+                  Installer for SteelSeries Weather Gauges
+
+Version: 2.7.4-1                                  Date: 9 May 2020
+
+Revision History
+    9 May 2020          v2.7.4-1
+        - upgraded to SteelSeries Weather Gauges version 2.7.4(minor tweaks)
+    17 September 2019   v2.7.4
+        - upgraded to SteelSeries Weather Gauges version 2.7.4
+    27 March 2019       v2.7.3
+        - upgraded to SteelSeries Weather Gauges version 2.7.3
+    31 August 2017      v2.6.3
+        - upgraded to SteelSeries Weather Gauges version 2.6.3
+    13 June 2017        v2.6.1
+        - initial release as a weeWX extension
+        - version number chosen to match SteelSeries Weather Gauges version
+"""
 
 import weewx
 
@@ -31,7 +32,7 @@ from distutils.version import StrictVersion
 from setup import ExtensionInstaller
 
 REQUIRED_VERSION = "3.4.0"
-SSWG_VERSION = "2.7.4"
+SSWG_VERSION = "2.7.4-1"
 
 
 def loader():
