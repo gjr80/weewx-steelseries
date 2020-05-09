@@ -55,7 +55,7 @@ weewx-steelseries releases page
 (https://github.com/gjr80/weewx-steelseries_gauges/releases) into a directory
 accessible from the WeeWX machine:
 
-    $ wget -P $DOWNLOAD_ROOT https://github.com/gjr80/weewx-steelseries/weather_gauges/releases/download/v2.7.4-1/steelseries-2.7.4-1.tar.gz
+    $ wget -P $DOWNLOAD_ROOT https://github.com/gjr80/weewx-steelseries/releases/download/v2.7.4-1/steelseries-2.7.4-1.tar.gz
 
 	where $DOWNLOAD_ROOT is the path to the directory where the SteelSeries
     Weather Gauges extension is to be downloaded.
@@ -101,7 +101,7 @@ weewx-steelseries_gauges releases page
 (https://github.com/gjr80/weewx-steelseries_gauges/releases) into a directory
 accessible from the WeeWX machine:
 
-     $ wget -P $DOWNLOAD_ROOT https://github.com/gjr80/weewx-steelseries/weather_gauges/releases/download/v2.7.4-1/steelseries-2.7.4-1.tar.gz
+     $ wget -P $DOWNLOAD_ROOT https://github.com/gjr80/weewx-steelseries/releases/download/v2.7.4-1/steelseries-2.7.4-1.tar.gz
 
 	where $DOWNLOAD_ROOT is the path to the directory where the SteelSeries
     Weather Gauges extension is to be downloaded.
