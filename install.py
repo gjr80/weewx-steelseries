@@ -10,9 +10,12 @@ PARTICULAR PURPOSE.  See the GNU General Public License for more details.
 
                   Installer for SteelSeries Weather Gauges
 
-Version: 2.7.4-1                                  Date: 9 May 2020
+Version: 2.7.4-2                                  Date: 3 June 2020
 
 Revision History
+    3 June 2020         v2.7.4-1
+        - upgraded to SteelSeries Weather Gauges version 2.7.4(more minor
+          tweaks)
     9 May 2020          v2.7.4-1
         - upgraded to SteelSeries Weather Gauges version 2.7.4(minor tweaks)
     17 September 2019   v2.7.4
@@ -32,7 +35,7 @@ from distutils.version import StrictVersion
 from setup import ExtensionInstaller
 
 REQUIRED_VERSION = "3.4.0"
-SSWG_VERSION = "2.7.4-1"
+SSWG_VERSION = "2.7.4-2"
 
 
 def loader():
