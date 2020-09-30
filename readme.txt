@@ -55,7 +55,7 @@ weewx-steelseries releases page
 (https://github.com/gjr80/weewx-steelseries_gauges/releases) into a directory
 accessible from the WeeWX machine:
 
-    $ wget -P $DOWNLOAD_ROOT https://github.com/gjr80/weewx-steelseries/releases/download/v2.7.4-2/steelseries-2.7.4-2.tar.gz
+    $ wget -P $DOWNLOAD_ROOT https://github.com/gjr80/weewx-steelseries/releases/download/v2.7.5/steelseries-2.7.5.tar.gz
 
 	where $DOWNLOAD_ROOT is the path to the directory where the SteelSeries
     Weather Gauges extension is to be downloaded.
@@ -63,15 +63,15 @@ accessible from the WeeWX machine:
 2.  Install the SteelSeries Weather Gauges extension downloaded at step 1 using
 the wee_extension utility:
 
-    $ wee_extension --install=$DOWNLOAD_ROOT/steelseries-2.7.4-2.tar.gz
+    $ wee_extension --install=$DOWNLOAD_ROOT/steelseries-2.7.5.tar.gz
 
     This will result in output similar to the following:
 
-        Request to install '/var/tmp/steelseries-2.7.4-2.tar.gz'
-        Extracting from tar archive /var/tmp/steelseries-2.7.4-2.tar.gz
+        Request to install '/var/tmp/steelseries-2.7.5.tar.gz'
+        Extracting from tar archive /var/tmp/steelseries-2.7.5.tar.gz
         Saving installer file to /home/weewx/bin/user/installer/SteelSeries
         Saved configuration dictionary. Backup copy at /home/weewx/weewx.conf.20170320124410
-        Finished installing extension '/var/tmp/steelseries-2.7.4-2.tar.gz'
+        Finished installing extension '/var/tmp/steelseries-2.7.5.tar.gz'
 
 3.  Restart WeeWX:
 
@@ -101,14 +101,14 @@ weewx-steelseries_gauges releases page
 (https://github.com/gjr80/weewx-steelseries_gauges/releases) into a directory
 accessible from the WeeWX machine:
 
-     $ wget -P $DOWNLOAD_ROOT https://github.com/gjr80/weewx-steelseries/releases/download/v2.7.4-2/steelseries-2.7.4-2.tar.gz
+     $ wget -P $DOWNLOAD_ROOT https://github.com/gjr80/weewx-steelseries/releases/download/v2.7.5/steelseries-2.7.5.tar.gz
 
 	where $DOWNLOAD_ROOT is the path to the directory where the SteelSeries
     Weather Gauges extension is to be downloaded.
 
 2.  Unpack the extension as follows:
 
-    $ tar xvfz steelseries-2.7.4-2.tar.gz
+    $ tar xvfz steelseries-2.7.5.tar.gz
 
 3.  Copy files from within the resulting directory as follows:
 
