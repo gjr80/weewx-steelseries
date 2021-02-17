@@ -10,11 +10,13 @@ PARTICULAR PURPOSE.  See the GNU General Public License for more details.
 
                   Installer for SteelSeries Weather Gauges
 
-Version: 2.7.5                                    Date: 1 October 2020
+Version: 2.7.6                                    Date: 18 February 2021
 
 Revision History
-    1 October 2020   v2.7.5
-        - upgraded to SteelSeries Weather Gauges version 2.7.4
+    18 February 2021    v2.7.6
+        - upgraded to SteelSeries Weather Gauges version 2.7.6
+    1 October 2020      v2.7.5
+        - upgraded to SteelSeries Weather Gauges version 2.7.5
     3 June 2020         v2.7.4-1
         - upgraded to SteelSeries Weather Gauges version 2.7.4(more minor
           tweaks)
@@ -37,7 +39,7 @@ from distutils.version import StrictVersion
 from setup import ExtensionInstaller
 
 REQUIRED_VERSION = "3.4.0"
-SSWG_VERSION = "2.7.5"
+SSWG_VERSION = "2.7.6"
 
 
 def loader():
@@ -56,7 +58,7 @@ class SswgInstaller(ExtensionInstaller):
             name='SteelSeries',
             description='A weeWX extension for the SteelSeries Weather Gauges.',
             author="Packaged by Gary Roderick, SteelSeries gauges by Gerrit Grunwald, "
-                 "Weather Gauges scripts by Mark Crossley and weeWX skin by Matthew Wall",
+                 "Weather Gauges scripts by Mark Crossley and WeeWX skin by Matthew Wall",
             author_email="gjroderick<@>gmail.com",
             config={
                 'StdReport': {
