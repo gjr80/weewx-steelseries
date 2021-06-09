@@ -29,7 +29,7 @@ Revision History
     31 August 2017      v2.6.3
         - upgraded to SteelSeries Weather Gauges version 2.6.3
     13 June 2017        v2.6.1
-        - initial release as a weeWX extension
+        - initial release as a WeeWX extension
         - version number chosen to match SteelSeries Weather Gauges version
 """
 
@@ -49,14 +49,14 @@ def loader():
 class SswgInstaller(ExtensionInstaller):
     def __init__(self):
         if StrictVersion(weewx.__version__) < StrictVersion(REQUIRED_VERSION):
-            msg = "%s requires weeWX %s or greater, found %s" % (''.join('SteelSeries Weather Gauges ', SSWG_VERSION),
+            msg = "%s requires WeeWX %s or greater, found %s" % (''.join('SteelSeries Weather Gauges ', SSWG_VERSION),
                                                                  REQUIRED_VERSION,
                                                                  weewx.__version__)
             raise weewx.UnsupportedFeature(msg)
         super(SswgInstaller, self).__init__(
             version=SSWG_VERSION,
             name='SteelSeries',
-            description='A weeWX extension for the SteelSeries Weather Gauges.',
+            description='A WeeWX extension for the SteelSeries Weather Gauges.',
             author="Packaged by Gary Roderick, SteelSeries gauges by Gerrit Grunwald, "
                  "Weather Gauges scripts by Mark Crossley and WeeWX skin by Matthew Wall",
             author_email="gjroderick<@>gmail.com",
